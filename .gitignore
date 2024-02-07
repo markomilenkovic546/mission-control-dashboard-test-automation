@@ -1,4 +1,4 @@
 node_modules
 cypress/reports
 cypress/screenshots
-cypress/e2e/e2e-tests/playground.cy.ts
+cypress/specs/e2e-tests/playground.cy.ts
