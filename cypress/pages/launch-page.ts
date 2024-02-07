@@ -1,4 +1,4 @@
-class LaunchPage {
+export default class LaunchPage {
   elements: {
     headerNavigation: {
       launchLink: () => Cypress.Chainable<JQuery<HTMLElement>>;
@@ -68,4 +68,4 @@ class LaunchPage {
   }
 }
 
-export default LaunchPage;
+
