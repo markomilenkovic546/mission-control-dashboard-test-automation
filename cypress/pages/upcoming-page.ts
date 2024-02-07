@@ -18,7 +18,14 @@ export default class UpcomingPage {
   };
 
   actions: {
-    clickOnAbortMissionButton: (rowIndex: number) => void;
+    headerNavigation: {
+      clickOnLaunchLink: () => void;
+      clickOnUpcomingLink: () => void;
+      clickOnHistoryLink: () => void;
+    };
+    upcomingMissionsTable: {
+      clickOnAbortMissionButton: (rowIndex: number) => void;
+    };
   };
 
   constructor() {
@@ -51,7 +58,15 @@ export default class UpcomingPage {
     };
 
     this.actions = {
-      clickOnAbortMissionButton: (rowIndex) => this.elements.upcomingMissionsTable.abortMissionButton(rowIndex).click(),
+      headerNavigation: {
+        clickOnLaunchLink: () => this.elements.headerNavigation.launchLink().click(),
+        clickOnUpcomingLink: () => this.elements.headerNavigation.upcomingLink().click(),
+        clickOnHistoryLink: () => this.elements.headerNavigation.historyLink().click(),
+      },
+      upcomingMissionsTable: {
+        clickOnAbortMissionButton: (rowIndex) =>
+          this.elements.upcomingMissionsTable.abortMissionButton(rowIndex).click(),
+      },
     };
   }
 }
