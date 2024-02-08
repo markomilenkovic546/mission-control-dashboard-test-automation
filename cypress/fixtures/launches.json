@@ -1,0 +1,115 @@
+[
+{
+        "flightNumber": 1,
+        "customers": [
+            "DARPA"
+        ],
+        "launchDate": "2006-03-24T22:30:00.000Z",
+        "mission": "FalconSat",
+        "rocket": "Falcon 1",
+        "success": false,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 2,
+        "customers": [
+            "DARPA"
+        ],
+        "launchDate": "2007-03-21T01:10:00.000Z",
+        "mission": "DemoSat",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 3,
+        "customers": [
+            "NASA",
+            "ORS"
+        ],
+        "launchDate": "2008-08-03T03:34:00.000Z",
+        "mission": "Trailblazer",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 4,
+        "customers": [
+            "SpaceX"
+        ],
+        "launchDate": "2008-09-27T23:15:00.000Z",
+        "mission": "RatSat",
+        "rocket": "Falcon 1",
+        "success": false,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 5,
+        "customers": [
+            "ATSB"
+        ],
+        "launchDate": "2009-07-13T03:35:00.000Z",
+        "mission": "RazakSat",
+        "rocket": "Falcon 1",
+        "success": false,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 6,
+        "customers": [
+            "SpaceX"
+        ],
+        "launchDate": "2010-06-04T18:45:00.000Z",
+        "mission": "Falcon 9 Test Flight",
+        "rocket": "Falcon 9",
+        "success": true,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 7,
+        "customers": [
+            "NASA(COTS)",
+            "NRO"
+        ],
+        "launchDate": "2010-12-08T15:43:00.000Z",
+        "mission": "COTS 1",
+        "rocket": "Falcon 9",
+        "success": false,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 8,
+        "customers": [
+            "NASA(COTS)"
+        ],
+        "launchDate": "2012-05-22T07:44:00.000Z",
+        "mission": "COTS 2",
+        "rocket": "Falcon 9",
+        "success": false,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 9,
+        "customers": [
+            "NASA (CRS)",
+            "Orbcomm"
+        ],
+        "launchDate": "2012-10-09T00:35:00.000Z",
+        "mission": "CRS-1",
+        "rocket": "Falcon 9",
+        "success": false,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 10,
+        "customers": [
+            "NASA (CRS)"
+        ],
+        "launchDate": "2013-03-01T19:10:00.000Z",
+        "mission": "CRS-2",
+        "rocket": "Falcon 9",
+        "success": false,
+        "upcoming": true
+    }
+]
