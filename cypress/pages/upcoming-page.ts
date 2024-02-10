@@ -8,21 +8,13 @@ export default class UpcomingPage {
 
         upcomingMissionsTable: {
             missionRows: () => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionRow: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionRow: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
             abortMissionButton: (
                 rowIndex: number
             ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionNumber: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionDate: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionRocket: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionNumber: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionDate: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionRocket: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
             missionDestination: (
                 rowIndex: number
             ) => Cypress.Chainable<JQuery<HTMLElement>>;
@@ -44,10 +36,8 @@ export default class UpcomingPage {
         this.elements = {
             headerNavigation: {
                 launchLink: () => cy.get('.Header-link-0-1-22[href="/launch"]'),
-                upcomingLink: () =>
-                    cy.get('.Header-link-0-1-22[href="/upcoming"]'),
-                historyLink: () =>
-                    cy.get('.Header-link-0-1-22[href="/history"]')
+                upcomingLink: () => cy.get('.Header-link-0-1-22[href="/upcoming"]'),
+                historyLink: () => cy.get('.Header-link-0-1-22[href="/history"]')
             },
 
             upcomingMissionsTable: {

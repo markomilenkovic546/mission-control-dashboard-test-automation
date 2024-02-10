@@ -8,24 +8,12 @@ export default class HistoryPage {
 
         missionHistoryTable: {
             missionRows: () => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionRow: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionStatus: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionName: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionNumber: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionDate: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
-            missionRocket: (
-                rowIndex: number
-            ) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionRow: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionStatus: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionName: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionNumber: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionDate: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionRocket: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
             missionCustomers: (
                 rowIndex: number
             ) => Cypress.Chainable<JQuery<HTMLElement>>;
@@ -44,10 +32,8 @@ export default class HistoryPage {
         this.elements = {
             headerNavigation: {
                 launchLink: () => cy.get('.Header-link-0-1-22[href="/launch"]'),
-                upcomingLink: () =>
-                    cy.get('.Header-link-0-1-22[href="/upcoming"]'),
-                historyLink: () =>
-                    cy.get('.Header-link-0-1-22[href="/history"]')
+                upcomingLink: () => cy.get('.Header-link-0-1-22[href="/upcoming"]'),
+                historyLink: () => cy.get('.Header-link-0-1-22[href="/history"]')
             },
 
             missionHistoryTable: {

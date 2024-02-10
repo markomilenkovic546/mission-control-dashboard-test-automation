@@ -10,9 +10,7 @@ export default class LaunchPage {
             launchDateInput: () => Cypress.Chainable<JQuery<HTMLElement>>;
             missionNameInput: () => Cypress.Chainable<JQuery<HTMLElement>>;
             rocketTypeInput: () => Cypress.Chainable<JQuery<HTMLElement>>;
-            destinationExpoplanetDropdown: () => Cypress.Chainable<
-                JQuery<HTMLElement>
-            >;
+            destinationExpoplanetDropdown: () => Cypress.Chainable<JQuery<HTMLElement>>;
             launchMissionButton: () => Cypress.Chainable<JQuery<HTMLElement>>;
         };
     };
@@ -39,18 +37,15 @@ export default class LaunchPage {
         this.elements = {
             headerNavigation: {
                 launchLink: () => cy.get('.Header-link-0-1-22[href="/launch"]'),
-                upcomingLink: () =>
-                    cy.get('.Header-link-0-1-22[href="/upcoming"]'),
-                historyLink: () =>
-                    cy.get('.Header-link-0-1-22[href="/history"]')
+                upcomingLink: () => cy.get('.Header-link-0-1-22[href="/upcoming"]'),
+                historyLink: () => cy.get('.Header-link-0-1-22[href="/history"]')
             },
 
             missionForm: {
                 launchDateInput: () => cy.get('#launch-day'),
                 missionNameInput: () => cy.get('#mission-name'),
                 rocketTypeInput: () => cy.get('#rocket-name'),
-                destinationExpoplanetDropdown: () =>
-                    cy.get('#planets-selector'),
+                destinationExpoplanetDropdown: () => cy.get('#planets-selector'),
                 launchMissionButton: () =>
                     cy.get('button:contains("Launch Mission ✔")')
             }
@@ -68,13 +63,9 @@ export default class LaunchPage {
                 typeLaunchDateInput: (date) =>
                     this.elements.missionForm.launchDateInput().type(date),
                 typeMissionNameInput: (missionName) =>
-                    this.elements.missionForm
-                        .missionNameInput()
-                        .type(missionName),
+                    this.elements.missionForm.missionNameInput().type(missionName),
                 typeRocketTypeInput: (rocketType) =>
-                    this.elements.missionForm
-                        .rocketTypeInput()
-                        .type(rocketType),
+                    this.elements.missionForm.rocketTypeInput().type(rocketType),
                 selectDestinationExpoplanetDropdown: (option) =>
                     this.elements.missionForm
                         .destinationExpoplanetDropdown()
