@@ -31,5 +31,6 @@ const populateDB = async () => {
         console.error('Error connecting to MongoDB:', error);
     }
 };
+//populateDB()
 
-module.exports = populateDB;
+export default populateDB;

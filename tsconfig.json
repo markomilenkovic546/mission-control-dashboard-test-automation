@@ -10,7 +10,9 @@
       "@launch-page/*": ["cypress/pages/*"],
       "@upcoming-page/*": ["cypress/pages/*"],
       "@history-page/*": ["cypress/pages/*"],
+      "@dropAllCollections/*": ["db/*"]
+     
     }
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts", "cypress.config.js"]
 }
