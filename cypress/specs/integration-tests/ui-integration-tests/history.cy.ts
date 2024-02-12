@@ -1,7 +1,7 @@
 import LaunchPage from '@launch-page/launch-page';
 import UpcomingPage from '@upcoming-page/upcoming-page';
 import HistoryPage from '@history-page/history-page';
-import * as launches from '../../../fixtures/launches.json';
+import * as launches from '../../../fixtures/mock-data/launches.json';
 import { formatDate } from 'cypress/utils';
 const launchPage = new LaunchPage();
 const upcomingPage = new UpcomingPage();

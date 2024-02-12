@@ -1,0 +1,12 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "keplerName": {
+                "type": "string"
+            }
+        },
+        "required": ["keplerName"]
+    }
+}

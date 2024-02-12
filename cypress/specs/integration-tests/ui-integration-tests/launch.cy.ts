@@ -1,8 +1,8 @@
 import LaunchPage from '@launch-page/launch-page';
 const tv4 = require('tv4');
-import * as planets from '../../../fixtures/planets.json';
-import { missionPayload } from 'cypress/fixtures/mission-payload';
-import * as payloadJsonSchema from '../../../fixtures/mission-payload-json-schema.json';
+import * as planets from '../../../fixtures/mock-data/planets.json';
+import { missionPayload } from 'cypress/fixtures/mock-data/mission-payload';
+import * as payloadJsonSchema from '../../../fixtures/json-schemas/mission-payload-json-schema.json';
 const launchPage = new LaunchPage();
 
 describe('Planets - Expected valid response handling', () => {
@@ -75,7 +75,7 @@ describe('Planets - Invalid response handling', () => {
 });
 
 describe('Launch - Posting mission', () => {
-    it.only('Post mission', () => {
+    it('Post mission', () => {
         cy.intercept('POST', `${Cypress.env('apiBaseUrl')}/launches`).as('mission');
 
         cy.visit('/');

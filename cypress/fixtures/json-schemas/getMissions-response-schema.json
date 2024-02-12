@@ -1,0 +1,42 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "flightNumber": {
+                "type": "integer"
+            },
+            "customers": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "launchDate": {
+                "type": "string",
+                "format": "date-time"
+            },
+            "mission": {
+                "type": "string"
+            },
+            "rocket": {
+                "type": "string"
+            },
+            "success": {
+                "type": "boolean"
+            },
+            "upcoming": {
+                "type": "boolean"
+            }
+        },
+        "required": [
+            "flightNumber",
+            "customers",
+            "launchDate",
+            "mission",
+            "rocket",
+            "success",
+            "upcoming"
+        ]
+    }
+}
