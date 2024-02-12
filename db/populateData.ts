@@ -6,12 +6,15 @@ const planetsData = require('./seed-data/planets-seed-data.json');
 
 require('dotenv').config();
 
-const mongoURI = process.env.MONGO_URL;
+const populateDB = async () => {
+    const mongoURI = process.env.MONGO_URL;
 
-// Connect to MongoDB
-mongoose
-    .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(async () => {
+    try {
+        // Connect to MongoDB
+        await mongoose.connect(mongoURI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
         console.log('Connected to MongoDB');
 
         // Populate launches collection
@@ -24,7 +27,9 @@ mongoose
 
         // Close the connection after populating collections
         mongoose.connection.close();
-    })
-    .catch((error) => {
+    } catch (error) {
         console.error('Error connecting to MongoDB:', error);
-    });
+    }
+};
+
+module.exports = populateDB;
