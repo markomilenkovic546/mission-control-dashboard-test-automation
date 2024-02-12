@@ -13,8 +13,10 @@ export default defineConfig({
             on('task', {
                 async resetDbState() {
                     await dropAllCollections();
-                    populateDB();
+                    await populateDB();
+                    return null
                 }
+               
             });
         },
         baseUrl: 'http://localhost:3000/',
