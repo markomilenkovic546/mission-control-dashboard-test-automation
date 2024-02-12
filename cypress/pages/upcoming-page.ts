@@ -14,6 +14,7 @@ export default class UpcomingPage {
             ) => Cypress.Chainable<JQuery<HTMLElement>>;
             missionNumber: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
             missionDate: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
+            missionName: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
             missionRocket: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
             missionDestination: (
                 rowIndex: number
@@ -62,17 +63,23 @@ export default class UpcomingPage {
                         .find('td')
                         .eq(2);
                 },
-                missionRocket: (rowIndex) => {
+                missionName: (rowIndex) => {
                     return this.elements.upcomingMissionsTable
                         .missionRow(rowIndex)
                         .find('td')
                         .eq(3);
                 },
-                missionDestination: (rowIndex) => {
+                missionRocket: (rowIndex) => {
                     return this.elements.upcomingMissionsTable
                         .missionRow(rowIndex)
                         .find('td')
                         .eq(4);
+                },
+                missionDestination: (rowIndex) => {
+                    return this.elements.upcomingMissionsTable
+                        .missionRow(rowIndex)
+                        .find('td')
+                        .eq(5);
                 }
             }
         };
