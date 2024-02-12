@@ -2,3 +2,4 @@ node_modules
 cypress/reports
 cypress/screenshots
 cypress/specs/e2e-tests/playground.cy.ts
+.env
