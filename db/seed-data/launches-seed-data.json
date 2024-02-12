@@ -1,0 +1,92 @@
+[
+    {
+        "flightNumber": 1,
+        "customers": ["DARPA"],
+        "launchDate": "2006-03-24T22:30:00.000Z",
+        "mission": "Mission 1",
+        "rocket": "Falcon 1",
+        "success": false,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 2,
+        "customers": ["DARPA"],
+        "launchDate": "2007-03-21T01:10:00.000Z",
+        "mission": "Mission 2",
+        "rocket": "Falcon 1",
+        "success": false,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 3,
+        "customers": ["DARPA"],
+        "launchDate": "2008-01-01T12:00:00.000Z",
+        "mission": "Mission 3",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 4,
+        "customers": ["DARPA"],
+        "launchDate": "2009-01-01T12:00:00.000Z",
+        "mission": "Mission 4",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 5,
+        "customers": ["DARPA"],
+        "launchDate": "2010-01-01T12:00:00.000Z",
+        "mission": "Mission 5",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": false
+    },
+    {
+        "flightNumber": 6,
+        "customers": ["DARPA"],
+        "launchDate": "2011-01-01T12:00:00.000Z",
+        "mission": "Mission 6",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 7,
+        "customers": ["DARPA"],
+        "launchDate": "2012-01-01T12:00:00.000Z",
+        "mission": "Mission 7",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 8,
+        "customers": ["DARPA"],
+        "launchDate": "2013-01-01T12:00:00.000Z",
+        "mission": "Mission 8",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 9,
+        "customers": ["DARPA"],
+        "launchDate": "2014-01-01T12:00:00.000Z",
+        "mission": "Mission 9",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": true
+    },
+    {
+        "flightNumber": 10,
+        "customers": ["DARPA"],
+        "launchDate": "2015-01-01T12:00:00.000Z",
+        "mission": "Mission 10",
+        "rocket": "Falcon 1",
+        "success": true,
+        "upcoming": true
+    }
+]
