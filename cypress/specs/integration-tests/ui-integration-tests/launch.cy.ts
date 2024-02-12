@@ -1,5 +1,8 @@
 import LaunchPage from '@launch-page/launch-page';
+const tv4 = require('tv4');
 import * as planets from '../../../fixtures/planets.json';
+import { missionPayload } from 'cypress/fixtures/mission-payload';
+import * as payloadJsonSchema from '../../../fixtures/mission-payload-json-schema.json';
 const launchPage = new LaunchPage();
 
 describe('Planets - Expected valid response handling', () => {
@@ -67,6 +70,32 @@ describe('Planets - Invalid response handling', () => {
             cy.get('body').contains(
                 'Oops! We encountered a problem while fetching data. Please try again later.'
             );
+        });
+    });
+});
+
+describe('Launch - Posting mission', () => {
+    it.only('Post mission', () => {
+        cy.intercept('POST', `${Cypress.env('apiBaseUrl')}/launches`).as('mission');
+
+        cy.visit('/');
+        //Fill the mission form
+        launchPage.actions.missionForm.typeMissionNameInput(missionPayload.mission);
+        launchPage.actions.missionForm.selectDestinationExpoplanet(
+            missionPayload.target
+        );
+        // Submit the mission form
+        launchPage.actions.missionForm.clickOnLaunchMissionButton();
+        cy.wait('@mission').then((interception) => {
+            const requestBody = interception.request.body;
+            //Verify request body properties
+            expect(requestBody.launchDate).to.equal(missionPayload.launchDate);
+            expect(requestBody.mission).to.equal(missionPayload.mission);
+            expect(requestBody.rocket).to.equal(missionPayload.rocket);
+            expect(requestBody.target).to.equal(missionPayload.target);
+            // Validate json schema of the request body
+            const isValid = tv4.validate(requestBody, payloadJsonSchema);
+            expect(isValid).to.be.true;
         });
     });
 });

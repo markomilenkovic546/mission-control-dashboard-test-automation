@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "launchDate": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "mission": {
+            "type": "string"
+        },
+        "rocket": {
+            "type": "string"
+        },
+        "target": {
+            "type": "string"
+        }
+    },
+    "required": ["launchDate", "mission", "rocket", "target"]
+}
