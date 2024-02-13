@@ -2,12 +2,12 @@ const tv4 = require('tv4');
 import * as planets from '../../../../db/seed-data/planets-seed-data.json';
 import * as planetsSchema from '../../../fixtures/json-schemas/getPlanets-response-schema.json';
 
-beforeEach(() => {
-    cy.task('resetDbState');
-});
-
-describe('Tests which cover "GET", /v1/planets" request ', () => {
-    it('Response status is equal 200', () => {
+describe('Tests which cover planets retrieving ', () => {
+    before(() => {
+        cy.task('resetDbState');
+    });
+    
+    it('Response status is 200 when retrieving planets', () => {
         cy.api({
             method: 'GET',
             url: `${Cypress.env('apiBaseUrl')}/planets`
@@ -16,7 +16,7 @@ describe('Tests which cover "GET", /v1/planets" request ', () => {
         });
     });
 
-    it('Response body contains expected properties', () => {
+    it('Response body contains expected properties when retrieving planets', () => {
         cy.api({
             method: 'GET',
             url: `${Cypress.env('apiBaseUrl')}/planets`
@@ -25,7 +25,7 @@ describe('Tests which cover "GET", /v1/planets" request ', () => {
         });
     });
 
-    it('Response body matches the expected schema', () => {
+    it('Response body matches the expected schema when retrieving planets', () => {
         cy.api({
             method: 'GET',
             url: `${Cypress.env('apiBaseUrl')}/planets`
