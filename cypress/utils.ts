@@ -24,6 +24,14 @@ export const getCurrentDate = () => {
     return `${year}-${month}-${day}T00:00:00.000Z`;
 };
 
+export const getCurrentDateInYYYYMMDDFormat = () => {
+    const currentDate = new Date();
+    const year = currentDate.getUTCFullYear();
+    const month = String(currentDate.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getUTCDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+};
+
 export const createLaunchPayload = () => {
     const launch = {
         launchDate: getCurrentDate(),
