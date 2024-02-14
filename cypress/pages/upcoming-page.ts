@@ -7,6 +7,7 @@ export default class UpcomingPage {
         };
 
         upcomingMissionsTable: {
+            tableBody: () => Cypress.Chainable<JQuery<HTMLElement>>;
             missionRows: () => Cypress.Chainable<JQuery<HTMLElement>>;
             missionRow: (rowIndex: number) => Cypress.Chainable<JQuery<HTMLElement>>;
             abortMissionButton: (
@@ -42,6 +43,7 @@ export default class UpcomingPage {
             },
 
             upcomingMissionsTable: {
+                tableBody: () => cy.get('tbody'),
                 missionRows: () => cy.get('tbody tr'),
                 missionRow: (index) => cy.get('tbody tr').eq(index),
                 abortMissionButton: (rowIndex) => {

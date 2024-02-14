@@ -1,9 +1,11 @@
 import * as defaultLaunchesData from '../../../db/seed-data/launches-seed-data.json';
 import * as planetsData from '../../../db/seed-data/planets-seed-data.json';
 import LaunchPage from '@launch-page/launch-page';
+import UpcomingPage from '@launch-page/upcoming-page';
 import { createLaunchPayload } from 'cypress/utils';
 import { getCurrentDateInYYYYMMDDFormat } from 'cypress/utils';
 const launchPage = new LaunchPage();
+const upcomingPage = new UpcomingPage();
 
 describe('Launch creation form', () => {
     before(() => {
@@ -102,6 +104,44 @@ describe('Launch creation form', () => {
             expect(interception.response.body).to.deep.eq({
                 error: 'Missing required launch property'
             });
+        });
+    });
+});
+
+describe('Launch creation form', () => {
+    before(() => {
+        cy.task('resetDbState');
+    });
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
+    it.only('User can abort mission', () => {
+        cy.getUpcomingLaunches().then((defaultUpcomingLaunches) => {
+            cy.visit('/');
+            launchPage.actions.headerNavigation.clickOnUpcomingLink();
+            upcomingPage.actions.upcomingMissionsTable.clickOnAbortMissionButton(0);
+            cy.wait(2000);
+            upcomingPage.elements.upcomingMissionsTable
+                .tableBody()
+                .find('tr')
+                //Verify that mission is aborted
+                .each(($tr) => {
+                    cy.wrap($tr)
+                        .find('td')
+                        .eq(3)
+                        .then(($missionName) => {
+                            const missionName = $missionName.text();
+                            expect(missionName).to.not.be.eq(
+                                defaultUpcomingLaunches[0].mission
+                            );
+                        });
+                });
+            //Verify that only one mission is aborted
+            upcomingPage.elements.upcomingMissionsTable
+                .tableBody()
+                .find('tr')
+                .should('have.length', defaultUpcomingLaunches.length - 1);
         });
     });
 });
