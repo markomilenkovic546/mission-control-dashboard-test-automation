@@ -4,14 +4,26 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "launch-e2e:chrome": "cypress run --spec cypress/specs/e2e-tests/launch.cy.ts --browser chrome",
+        "navigation-e2e:chrome": "cypress run --spec cypress/specs/e2e-tests/navigation.cy.ts --browser chrome",
+        "e2e-tests:chrome": "cypress run --spec cypress/specs/e2e-tests --browser chrome",
+
+        "launch-e2e:edge": "cypress run --spec cypress/specs/e2e-tests/launch.cy.ts --browser edge",
+        "navigation-e2e:edge": "cypress run --spec cypress/specs/e2e-tests/navigation.cy.ts --browser edge",
+        "e2e-tests:edge": "cypress run --spec cypress/specs/e2e-tests --browser edge",
+
+        "launch-e2e:firefox": "cypress run --spec cypress/specs/e2e-tests/launch.cy.ts --browser firefox",
+        "navigation-e2e:firefox": "cypress run --spec cypress/specs/e2e-tests/navigation.cy.ts --browser firefox",
+        "e2e-tests:firefox": "cypress run --spec cypress/specs/e2e-tests --browser firefox",
+
+        "ui-integration-tests": "cypress run --spec cypress/specs/integration-tests/ui-integration-tests --browser chrome",
+        "api-integration-tests": "cypress run --spec cypress/specs/integration-tests/api-integration-tests"
     },
     "keywords": [],
-    "author": "",
+    "author": "Marko Milenkovic",
     "license": "ISC",
     "dependencies": {
         "@faker-js/faker": "^8.4.1",
-        "artillery": "^2.0.5",
         "cypress": "^13.6.4",
         "cypress-mochawesome-reporter": "^3.8.1",
         "cypress-plugin-api": "^2.11.1",

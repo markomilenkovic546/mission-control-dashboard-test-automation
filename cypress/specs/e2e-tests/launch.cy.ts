@@ -116,7 +116,7 @@ describe('Launch creation form', () => {
         cy.visit('/');
     });
 
-    it.only('User can abort mission', () => {
+    it('User can abort mission', () => {
         cy.getUpcomingLaunches().then((defaultUpcomingLaunches) => {
             cy.visit('/');
             launchPage.actions.headerNavigation.clickOnUpcomingLink();
