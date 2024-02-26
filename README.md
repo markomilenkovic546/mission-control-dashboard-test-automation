@@ -2,7 +2,7 @@
 
 This repository showcases a framework built with Cypress for the
 **Mission control dashboard full stack demo app**: [https://github.com/odziem/nasa-project](https://github.com/odziem/nasa-project).
-It includes end-to-end tests, UI integration tests, and API integration tests.The framework follows the Page Object Model (POM) design. Additionally, the `commands.ts` file includes custom commands serving as an additional abstraction layer. The `utils.ts` file contains utilty functions.
+It includes end-to-end tests, UI integration tests, and API integration tests. The framework follows the Page Object Model (POM) design. Additionally, the `commands.ts` file includes custom commands serving as an additional abstraction layer. The `utils.ts` file contains utilty functions.
 
 
 ## DB state reset/test data preparation 🗃️
