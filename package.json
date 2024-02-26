@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "all-specs": "cypress run --spec cypress/specs --browser chrome",
         "launch-e2e:chrome": "cypress run --spec cypress/specs/e2e-tests/launch.cy.ts --browser chrome",
         "navigation-e2e:chrome": "cypress run --spec cypress/specs/e2e-tests/navigation.cy.ts --browser chrome",
         "e2e-tests:chrome": "cypress run --spec cypress/specs/e2e-tests --browser chrome",
