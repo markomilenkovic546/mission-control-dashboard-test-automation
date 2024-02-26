@@ -7,7 +7,7 @@ It includes end-to-end tests, UI integration tests, and API integration tests. T
 
 ## DB state reset/test data preparation 🗃️
 
-In order to reset DB state between the tests, Mongo database state management is implemented through actions such as dropping, creating, and populating collections before tests. The `dropAllCollections` and `populateDB` functions
+In order to reset DB state between the tests (or before group of tests), Mongo database state management is implemented through actions such as dropping, creating, and populating collections before tests. The `dropAllCollections` and `populateDB` functions
 utilizing the Mongoose ORM package handle cleaning and seeding test data. These functions are encapsulated within Cypress tasks for convenient access within spec files.
 
 
