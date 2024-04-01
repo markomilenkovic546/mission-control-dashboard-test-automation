@@ -122,7 +122,7 @@ describe('History table - Invalid response handling', () => {
         });
     });
 
-    it('Client appropriately mandles error 500 response from server during mission retrieval', () => {
+    it('Client appropriately handles error 500 response from the server during mission retrieval', () => {
         //Listen for network requests and intercept particular GET request
         cy.intercept('GET', `${Cypress.env('apiBaseUrl')}/launches`, {
             statusCode: 500,
